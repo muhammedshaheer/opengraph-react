@@ -21,15 +21,15 @@ const Test = () => {
         <>
             <Helmet>
                 <title>Test</title>
-                <meta property="og:title" content={product?.title} />
-                <meta property="og:description" content={product?.description} />
-                <meta property="og:image" content={product?.image} />
+                <meta property="og:title" content="__META_OG_TITLE__" />
+                <meta property="og:description" content="__META_OG_DESCRIPTION__" />
+                <meta property="og:image" content="__META_OG_IMAGE__" />
                 <meta property="og:url" content={window.location.href} />
                 <meta property="og:type" content="website" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={product?.title} />
-                <meta name="twitter:description" content={product?.description} />
-                <meta name="twitter:image" content={product?.image} />
+                <meta name="twitter:title" content="__META_OG_TITLE__" />
+                <meta name="twitter:description" content="__META_OG_DESCRIPTION__" />
+                <meta name="twitter:image" content="__META_OG_IMAGE__" />
             </Helmet>
             <div>
                 <h1>Test</h1>

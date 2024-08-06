@@ -44,6 +44,18 @@ app.get('/test/:id', (req, res, next) => {
     });
 });
 
+app.get('*', (req, res, next) => {
+    fs.readFile(indexPath, 'utf8', async (err, htmlData) => {
+        if (err) {
+            console.error('Error during file reading', err);
+            return res.status(404).end()
+        }
+        // inject meta tags
+
+        return res.send(htmlData);
+    });
+});
+
 app.listen(PORT, (error) => {
     if (error) {
         return console.log('Error during app startup', error);
